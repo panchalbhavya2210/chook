@@ -1,4 +1,4 @@
-import { createClient } from "contentful";
+const { createClient } = require("contentful");
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -46,6 +46,7 @@ async function run() {
         Authorization: `Bearer ${process.env.ABC_GITHUB_TOKEN}`,
         Accept: "application/vnd.github+json",
         "Content-Type": "application/json",
+        "User-Agent": "contentful-webhook",
       },
       body: JSON.stringify({
         message: "Auto sync from Contentful",
