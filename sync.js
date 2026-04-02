@@ -7,7 +7,7 @@ const client = createClient({
 
 const [OWNER, REPO] = process.env.GITHUB_REPOSITORY.split("/");
 const FILE_PATH = "data/articles.json";
-const BRANCH = "main";
+const BRANCH = "master";
 
 async function getAllEntries() {
   let allItems = [];
