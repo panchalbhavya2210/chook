@@ -9,13 +9,32 @@ const [OWNER, REPO] = process.env.GITHUB_REPOSITORY.split("/");
 const FILE_PATH = "data/articles.json";
 const BRANCH = "main";
 
+async function getAllEntries() {
+  let allItems = [];
+  let skip = 0;
+  const limit = 1000; // max allowed by Contentful
+
+  while (true) {
+    const res = await client.getEntries({
+      skip,
+      limit,
+    });
+
+    allItems = allItems.concat(res.items);
+
+    if (skip + limit >= res.total) break;
+
+    skip += limit;
+  }
+
+  return allItems;
+}
+
 async function run() {
   // 1. Fetch Contentful data
-  const res = await client.getEntries({
-    content_type: "article",
-  });
+  const res = await client.getEntries();
 
-  const data = res.items;
+  const data = await getAllEntries();
 
   const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
 
