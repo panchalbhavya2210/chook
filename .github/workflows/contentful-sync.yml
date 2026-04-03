@@ -1,27 +1,58 @@
-name: Sync from Contentful
+# name: Sync from Contentful
+
+# on:
+#   repository_dispatch:
+#     types: [contentful-update]
+
+# jobs:
+#   sync:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - uses: actions/checkout@v3
+
+#       - name: Setup Node
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 18
+
+#       - name: Install deps
+#         run: npm install contentful
+
+#       - name: Run sync
+#         run: node sync.js
+#         env:
+#           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+#           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+#           ABC_GITHUB_TOKEN: ${{ secrets.ABC_GITHUB_TOKEN }}
+#           PRJID: ${{secrets.SANITY_PROJECT_ID}}
+
+
+name: Sync Sanity to GitHub
 
 on:
   repository_dispatch:
-    types: [contentful-update]
+    types: [sanity-sync]
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install deps
-        run: npm install contentful
+        run: npm install
 
-      - name: Run sync
-        run: node sync.js
+      - name: Run sync script
+        run: node scripts/syncsan.js
         env:
-          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          PRJID: ${{ secrets.SANITY_PROJECT_ID }}
+          SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
           ABC_GITHUB_TOKEN: ${{ secrets.ABC_GITHUB_TOKEN }}
