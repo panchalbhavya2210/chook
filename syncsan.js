@@ -14,13 +14,12 @@ const FILE_PATH = "data/articles2.json";
 const BRANCH = "master";
 
 async function getAllEntries() {
-  const query = `*[_type == "post"]{
+  const query = `*[]{
+    ...,
+    _type,
     _id,
-    title,
-    slug,
-    publishedAt,
-    body,
-    "image": image.asset->url
+    _createdAt,
+    _updatedAt
   }`;
   return await client.fetch(query);
 }
