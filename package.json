@@ -1,0 +1,24 @@
+{
+  "name": "git-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sync.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panchalbhavya2210/chook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/panchalbhavya2210/chook/issues"
+  },
+  "homepage": "https://github.com/panchalbhavya2210/chook#readme",
+  "dependencies": {
+    "@sanity/client": "^7.20.0"
+  }
+}
