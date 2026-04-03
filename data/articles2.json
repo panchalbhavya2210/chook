@@ -1,6 +1,16 @@
 [
   {
+    "_createdAt": "2026-04-03T07:38:33Z",
     "_id": "0ebdc2d8-4b0d-4eec-b1ad-5517863b2aa0",
+    "_rev": "Hrb7ilpKVi05CuYRI03Ptv",
+    "_system": {
+      "base": {
+        "id": "0ebdc2d8-4b0d-4eec-b1ad-5517863b2aa0",
+        "rev": "Hrb7ilpKVi05CuYRI03Lom"
+      }
+    },
+    "_type": "post",
+    "_updatedAt": "2026-04-03T09:15:00Z",
     "body": [
       {
         "_key": "d168acb05bd1",
@@ -17,7 +27,13 @@
         "style": "normal"
       }
     ],
-    "image": "https://cdn.sanity.io/images/hzvxs3nf/production/16b46deae68a279c89b3f7f9c33a700ea457dcdf-479x480.webp",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-16b46deae68a279c89b3f7f9c33a700ea457dcdf-479x480-webp",
+        "_type": "reference"
+      }
+    },
     "publishedAt": "2026-04-03T07:38:30.010Z",
     "slug": {
       "_type": "slug",
@@ -26,7 +42,11 @@
     "title": "Tame Impala"
   },
   {
+    "_createdAt": "2026-04-03T05:52:00Z",
     "_id": "5602f1ca-3fe3-4b6b-a9be-10096db9cdde",
+    "_rev": "Hrb7ilpKVi05CuYRHzzdGu",
+    "_type": "post",
+    "_updatedAt": "2026-04-03T05:52:36Z",
     "body": [
       {
         "_key": "0da73a254b26",
@@ -43,7 +63,13 @@
         "style": "normal"
       }
     ],
-    "image": "https://cdn.sanity.io/images/hzvxs3nf/production/ed26a191caf2aa261999b012a5a3366eb409a823-720x853.webp",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-ed26a191caf2aa261999b012a5a3366eb409a823-720x853-webp",
+        "_type": "reference"
+      }
+    },
     "publishedAt": "2026-04-02T05:51:00.000Z",
     "slug": {
       "_type": "slug",
@@ -52,14 +78,828 @@
     "title": "Second Blog Post With Unique Image"
   },
   {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.access-manager",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [],
+    "members": []
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.administrator",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [
+      {
+        "filter": "_id in path(\"**\")",
+        "permissions": [
+          "history",
+          "read",
+          "update",
+          "create"
+        ]
+      },
+      {
+        "filter": "(_id in path(\"**\")) && (_id in path(\"drafts.**\") || _id in path(\"versions.**\"))",
+        "permissions": [
+          "history",
+          "read",
+          "update",
+          "create"
+        ]
+      }
+    ],
+    "members": [
+      "pdcJ6XjHw"
+    ]
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.create-session",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [],
+    "members": []
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.public",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [
+      {
+        "filter": "_id in path(\"*\")",
+        "permissions": [
+          "read"
+        ]
+      }
+    ],
+    "members": [
+      "everyone"
+    ]
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.read",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [],
+    "members": []
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.sanity.contributor",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [
+      {
+        "filter": "_type == \"sanity.imageAsset\"",
+        "permissions": [
+          "create"
+        ]
+      },
+      {
+        "filter": "_type == \"sanity.fileAsset\"",
+        "permissions": [
+          "create"
+        ]
+      },
+      {
+        "filter": "_id in path(\"**\")",
+        "permissions": [
+          "history",
+          "read"
+        ]
+      },
+      {
+        "filter": "(_id in path(\"**\")) && (_id in path(\"drafts.**\") || _id in path(\"versions.**\"))",
+        "permissions": [
+          "history",
+          "read",
+          "update",
+          "create"
+        ]
+      }
+    ],
+    "members": []
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.sanity.developer",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [
+      {
+        "filter": "_id in path(\"**\")",
+        "permissions": [
+          "history",
+          "read",
+          "update",
+          "create"
+        ]
+      },
+      {
+        "filter": "(_id in path(\"**\")) && (_id in path(\"drafts.**\") || _id in path(\"versions.**\"))",
+        "permissions": [
+          "history",
+          "read",
+          "update",
+          "create"
+        ]
+      }
+    ],
+    "members": [
+      "pIAcUaXGy"
+    ]
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.sanity.editor",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [
+      {
+        "filter": "_id in path(\"**\")",
+        "permissions": [
+          "history",
+          "read",
+          "update",
+          "create"
+        ]
+      },
+      {
+        "filter": "(_id in path(\"**\")) && (_id in path(\"drafts.**\") || _id in path(\"versions.**\"))",
+        "permissions": [
+          "history",
+          "read",
+          "update",
+          "create"
+        ]
+      }
+    ],
+    "members": []
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.sanity.viewer",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [
+      {
+        "filter": "_id in path(\"**\")",
+        "permissions": [
+          "history",
+          "read"
+        ]
+      },
+      {
+        "filter": "(_id in path(\"**\")) && (_id in path(\"drafts.**\") || _id in path(\"versions.**\"))",
+        "permissions": [
+          "history",
+          "read"
+        ]
+      }
+    ],
+    "members": []
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.groups.write",
+    "_rev": "Tvj07qhO1kfFDFySUGdcpu",
+    "_type": "system.group",
+    "_updatedAt": "2026-04-03T09:00:11Z",
+    "grants": [],
+    "members": []
+  },
+  {
+    "_createdAt": "2026-04-03T05:18:44Z",
+    "_id": "_.retention._maximum_project",
+    "_rev": "Hrb7ilpKVi05CuYRHzzSU8",
+    "_type": "system.retention",
+    "_updatedAt": "2026-04-03T05:18:44Z",
+    "days": 90,
+    "maximum": true,
+    "preferShorter": true
+  },
+  {
+    "_createdAt": "2026-04-03T06:13:01Z",
+    "_id": "_.schemas.default",
+    "_rev": "5RHnDHga3j5d2aGwsF3gmC",
+    "_type": "system.schema",
+    "_updatedAt": "2026-04-03T09:21:13Z",
+    "schema": "[{\"fields\":[{\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"presence\",\"constraint\":\"required\"}]}],\"name\":\"title\",\"type\":\"string\"},{\"options\":{\"source\":\"title\"},\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"custom\"},{\"flag\":\"presence\",\"constraint\":\"required\"}]}],\"name\":\"slug\",\"type\":\"slug\"},{\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"presence\",\"constraint\":\"required\"}]}],\"name\":\"publishedAt\",\"type\":\"datetime\"},{\"of\":[{\"options\":{\"hotspot\":true},\"fields\":[{\"name\":\"alt\",\"type\":\"string\",\"title\":\"Alt text\"},{\"name\":\"caption\",\"type\":\"string\"}],\"type\":\"image\"}],\"name\":\"images\",\"type\":\"array\"},{\"of\":[{\"lists\":[{\"value\":\"bullet\",\"title\":\"Bulleted list\"},{\"value\":\"number\",\"title\":\"Numbered list\"}],\"marks\":{\"annotations\":[{\"i18nTitleKey\":\"inputs.portable-text.annotation.link\",\"options\":{\"modal\":{\"type\":\"popover\"}},\"fields\":[{\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"uri\",\"constraint\":{\"options\":{\"scheme\":[\"/^http$/\",\"/^https$/\",\"/^tel$/\",\"/^mailto$/\"],\"allowRelative\":true,\"relativeOnly\":false,\"allowCredentials\":false}}}]}],\"description\":\"A valid web, email, phone, or relative link.\",\"name\":\"href\",\"type\":\"url\",\"title\":\"Link\"}],\"name\":\"link\",\"type\":\"object\"}],\"decorators\":[{\"value\":\"strong\",\"title\":\"Strong\"},{\"value\":\"em\",\"title\":\"Italic\"},{\"value\":\"code\",\"title\":\"Code\"},{\"value\":\"underline\",\"title\":\"Underline\"},{\"value\":\"strike-through\",\"title\":\"Strike\"}]},\"of\":[],\"styles\":[{\"value\":\"normal\",\"title\":\"Normal\"},{\"value\":\"h1\",\"title\":\"Heading 1\"},{\"value\":\"h2\",\"title\":\"Heading 2\"},{\"value\":\"h3\",\"title\":\"Heading 3\"},{\"value\":\"h4\",\"title\":\"Heading 4\"},{\"value\":\"h5\",\"title\":\"Heading 5\"},{\"value\":\"h6\",\"title\":\"Heading 6\"},{\"value\":\"blockquote\",\"title\":\"Quote\"}],\"type\":\"block\"}],\"name\":\"body\",\"type\":\"array\"}],\"name\":\"post\",\"type\":\"document\"},{\"fields\":[{\"of\":[{\"fields\":[{\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"presence\",\"constraint\":\"required\"}]}],\"name\":\"label\",\"type\":\"string\"},{\"options\":{\"list\":[{\"title\":\"Only Links\",\"value\":\"onlyLinks\"},{\"title\":\"With Side Card\",\"value\":\"withSideCard\"}]},\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"valid\",\"constraint\":[\"onlyLinks\",\"withSideCard\"]},{\"flag\":\"presence\",\"constraint\":\"required\"}]}],\"name\":\"layout\",\"type\":\"string\"},{\"of\":[{\"fields\":[{\"name\":\"title\",\"type\":\"string\"},{\"name\":\"colSpan\",\"type\":\"number\"},{\"of\":[{\"fields\":[{\"options\":{\"list\":[{\"title\":\"Image\",\"value\":\"image\"},{\"title\":\"Link\",\"value\":\"link\"},{\"title\":\"Link With Header\",\"value\":\"linkWithHeader\"}]},\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"valid\",\"constraint\":[\"image\",\"link\",\"linkWithHeader\"]},{\"flag\":\"presence\",\"constraint\":\"required\"}]}],\"name\":\"type\",\"type\":\"string\"},{\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"presence\",\"constraint\":\"required\"}]}],\"name\":\"label\",\"type\":\"string\"},{\"validation\":[{\"level\":\"error\",\"rules\":[{\"flag\":\"presence\",\"constraint\":\"required\"}]}],\"name\":\"href\",\"type\":\"string\"},{\"hidden\":\"conditional\",\"name\":\"image\",\"type\":\"image\"},{\"hidden\":\"conditional\",\"name\":\"width\",\"type\":\"number\"}],\"type\":\"object\",\"name\":\"sectionItem\"}],\"name\":\"items\",\"type\":\"array\"}],\"type\":\"object\",\"name\":\"section\"}],\"name\":\"sections\",\"type\":\"array\"},{\"fields\":[{\"initialValue\":\"banner\",\"readOnly\":true,\"name\":\"type\",\"type\":\"string\"},{\"name\":\"title\",\"type\":\"string\"},{\"name\":\"description\",\"type\":\"string\"},{\"name\":\"cta\",\"type\":\"string\"},{\"name\":\"image\",\"type\":\"image\"}],\"name\":\"promo\",\"type\":\"object\"},{\"fields\":[{\"options\":{\"list\":[{\"title\":\"Header Side Card\",\"value\":\"headerSideCard\"},{\"title\":\"Career Side Card\",\"value\":\"careerSideCard\"}]},\"name\":\"type\",\"type\":\"string\"},{\"hidden\":\"conditional\",\"name\":\"title\",\"type\":\"string\"},{\"name\":\"description\",\"type\":\"text\"},{\"name\":\"link\",\"type\":\"string\"},{\"hidden\":\"conditional\",\"name\":\"image\",\"type\":\"image\"},{\"hidden\":\"conditional\",\"name\":\"linkLabel\",\"type\":\"string\"},{\"hidden\":\"conditional\",\"name\":\"imageAlt\",\"type\":\"string\"}],\"hidden\":\"conditional\",\"name\":\"sideCard\",\"type\":\"object\"}],\"type\":\"object\",\"name\":\"navItem\"}],\"name\":\"items\",\"type\":\"array\"}],\"name\":\"navbar\",\"type\":\"document\"}]",
+    "version": "2025-05-01",
+    "workspace": {
+      "name": "default",
+      "title": "Accurate"
+    }
+  },
+  {
+    "_createdAt": "2026-04-03T08:32:42Z",
+    "_id": "cf21e039-6563-4a68-87af-3c9bdda40996",
+    "_rev": "5RHnDHga3j5d2aGwsF4Wxb",
+    "_system": {
+      "base": {
+        "id": "cf21e039-6563-4a68-87af-3c9bdda40996",
+        "rev": "Hrb7ilpKVi05CuYRI03ksy"
+      }
+    },
+    "_type": "navbar",
+    "_updatedAt": "2026-04-03T09:27:08Z",
+    "items": [
+      {
+        "_key": "83fcdf4c6e67",
+        "_type": "navItem",
+        "label": "Products",
+        "layout": "onlyLinks",
+        "promo": {
+          "type": "banner"
+        },
+        "sections": [
+          {
+            "_key": "60bcfbff5c7a",
+            "_type": "section",
+            "colSpan": 11,
+            "items": [
+              {
+                "_key": "3e26ede433a4",
+                "_type": "sectionItem",
+                "href": "/products/core-banking",
+                "image": {
+                  "_type": "image",
+                  "asset": {
+                    "_ref": "image-620e5908c5c7967239a91544f0137bbd9a48448b-256x256-svg",
+                    "_type": "reference"
+                  }
+                },
+                "label": "It is an enterprise browser-based multi-channel banking solution that enables full range of banking services.",
+                "type": "image",
+                "width": 159
+              }
+            ],
+            "title": "Digital Core Banking"
+          },
+          {
+            "_key": "c21e72b97ad5",
+            "_type": "section",
+            "items": [
+              {
+                "_key": "3606bbbbb84a",
+                "_type": "sectionItem",
+                "href": "/products/omnichannel-banking",
+                "label": "Mobile Banking",
+                "type": "link"
+              },
+              {
+                "_key": "70e3dbf430c3",
+                "_type": "sectionItem",
+                "href": "/products/omnichannel-banking",
+                "label": "Tab Banking",
+                "type": "link"
+              },
+              {
+                "_key": "e6a189afba33",
+                "_type": "sectionItem",
+                "href": "/products/omnichannel-banking",
+                "label": "Kiosk",
+                "type": "link"
+              }
+            ],
+            "title": "Omnichannel Banking"
+          }
+        ]
+      },
+      {
+        "_key": "e95a95aefcee",
+        "_type": "navItem",
+        "label": "ewrtyudf",
+        "layout": "onlyLinks",
+        "promo": {
+          "type": "banner"
+        }
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-04-03T05:35:43Z",
     "_id": "e1e86f85-e2c5-4576-9aaa-1c9abb63c629",
-    "body": null,
-    "image": "https://cdn.sanity.io/images/hzvxs3nf/production/2e0efec87797028bcde6c8dbe6bc8d88408e9e9f-720x470.webp",
+    "_rev": "5RHnDHga3j5d2aGwsEmNKC",
+    "_type": "post",
+    "_updatedAt": "2026-04-03T05:37:55Z",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-2e0efec87797028bcde6c8dbe6bc8d88408e9e9f-720x470-webp",
+        "_type": "reference"
+      }
+    },
     "publishedAt": "2026-04-02T05:35:00.000Z",
     "slug": {
       "_type": "slug",
       "current": "first-sanity-blog"
     },
     "title": "First Sanity Blog"
+  },
+  {
+    "_createdAt": "2026-04-03T07:38:45Z",
+    "_id": "image-16b46deae68a279c89b3f7f9c33a700ea457dcdf-479x480-webp",
+    "_rev": "Tvj07qhO1kfFDFySUGd1dF",
+    "_type": "sanity.imageAsset",
+    "_updatedAt": "2026-04-03T07:38:45Z",
+    "assetId": "16b46deae68a279c89b3f7f9c33a700ea457dcdf",
+    "extension": "webp",
+    "metadata": {
+      "_type": "sanity.imageMetadata",
+      "blurHash": "e38|^l_300IU%MD%of-;xu%MD%WBt7j[of_3ayM{WBD%00j[_3ofIU",
+      "dimensions": {
+        "_type": "sanity.imageDimensions",
+        "aspectRatio": 0.9979166666666667,
+        "height": 480,
+        "width": 479
+      },
+      "hasAlpha": false,
+      "isOpaque": true,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMHBAb/xAAjEAACAgEEAQUBAAAAAAAAAAABAgADBAUGERIhEyIxQlFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMxrViw8n4lNyYbYa4/FosS5O3j6n8nVt7HTULSrWdAB4P8AZXUduml1ezL79eTZ2PIA/BAzjMJF58mJLVrRXqFyD4ViIgeu27kW11+xiOXAltyalk+q9fqe1WAAiIGaZVr2ZNjMeWLEmIiB/9k=",
+      "palette": {
+        "_type": "sanity.imagePalette",
+        "darkMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#444444",
+          "foreground": "#fff",
+          "population": 13.12,
+          "title": "#fff"
+        },
+        "darkVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#424242",
+          "foreground": "#fff",
+          "population": 0,
+          "title": "#fff"
+        },
+        "dominant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#444444",
+          "foreground": "#fff",
+          "population": 13.12,
+          "title": "#fff"
+        },
+        "lightMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#b3b3b3",
+          "foreground": "#000",
+          "population": 3.05,
+          "title": "#fff"
+        },
+        "lightVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#bcbcbc",
+          "foreground": "#000",
+          "population": 0,
+          "title": "#fff"
+        },
+        "muted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#7b7b7b",
+          "foreground": "#fff",
+          "population": 5.34,
+          "title": "#fff"
+        },
+        "vibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#7f7f7f",
+          "foreground": "#fff",
+          "population": 0,
+          "title": "#fff"
+        }
+      },
+      "thumbHash": "0AcKBwAMeGl2iXl2d6h3SKh5GU+kDrsF"
+    },
+    "mimeType": "image/webp",
+    "originalFilename": "images.webp",
+    "path": "images/hzvxs3nf/production/16b46deae68a279c89b3f7f9c33a700ea457dcdf-479x480.webp",
+    "sha1hash": "16b46deae68a279c89b3f7f9c33a700ea457dcdf",
+    "size": 31610,
+    "uploadId": "mSk4tzXs1ha8r8yUVJ6yJI5Fpv2euRT7",
+    "url": "https://cdn.sanity.io/images/hzvxs3nf/production/16b46deae68a279c89b3f7f9c33a700ea457dcdf-479x480.webp"
+  },
+  {
+    "_createdAt": "2026-04-03T05:36:09Z",
+    "_id": "image-2e0efec87797028bcde6c8dbe6bc8d88408e9e9f-720x470-webp",
+    "_rev": "Hrb7ilpKVi05CuYRHzzXNu",
+    "_type": "sanity.imageAsset",
+    "_updatedAt": "2026-04-03T05:36:09Z",
+    "assetId": "2e0efec87797028bcde6c8dbe6bc8d88408e9e9f",
+    "extension": "webp",
+    "metadata": {
+      "_type": "sanity.imageMetadata",
+      "blurHash": "VhQ0H$t7?uofNG_NayafayRP?aayIVj[f*4oj[ocj[xu",
+      "dimensions": {
+        "_type": "sanity.imageDimensions",
+        "aspectRatio": 1.5319148936170213,
+        "height": 470,
+        "width": 720
+      },
+      "hasAlpha": false,
+      "isOpaque": true,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYDBQcI/8QAJBAAAAUDBAIDAAAAAAAAAAAAAQIDBAUAERIGByExEyJRYYH/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/EABoRAQACAwEAAAAAAAAAAAAAAAEAEQITITH/2gAMAwEAAhEDEQA/AOlJufjYZqos+dJkwC+GQZD+UmaQ3BiXco6bquTJEWPmiZY/Fvj6qae22jJR+q5cOHGZxv3e1UMftTDr+bNdf0OJQ4DqmOFd9i1rSJU1tFwismB0VSHIPRimAQopYgNHNYqOK1RcuDEKIiFxtRQkZ//Z",
+      "palette": {
+        "_type": "sanity.imagePalette",
+        "darkMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#3f5268",
+          "foreground": "#fff",
+          "population": 1.75,
+          "title": "#fff"
+        },
+        "darkVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#0b519c",
+          "foreground": "#fff",
+          "population": 2.7,
+          "title": "#fff"
+        },
+        "dominant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#dc3439",
+          "foreground": "#fff",
+          "population": 2.89,
+          "title": "#fff"
+        },
+        "lightMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#d3bebe",
+          "foreground": "#000",
+          "population": 0.71,
+          "title": "#fff"
+        },
+        "lightVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#f0898c",
+          "foreground": "#000",
+          "population": 1.36,
+          "title": "#fff"
+        },
+        "muted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#60889e",
+          "foreground": "#fff",
+          "population": 0.13,
+          "title": "#fff"
+        },
+        "vibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#dc3439",
+          "foreground": "#fff",
+          "population": 2.89,
+          "title": "#fff"
+        }
+      },
+      "thumbHash": "8wcODYLYd6h/d4Z8hQiIfOeIfwj4"
+    },
+    "mimeType": "image/webp",
+    "originalFilename": "hanger-black-n-blue-1.webp",
+    "path": "images/hzvxs3nf/production/2e0efec87797028bcde6c8dbe6bc8d88408e9e9f-720x470.webp",
+    "sha1hash": "2e0efec87797028bcde6c8dbe6bc8d88408e9e9f",
+    "size": 38060,
+    "uploadId": "VAelihrKxWUykHmHo8hzOHrl4YBM4BNt",
+    "url": "https://cdn.sanity.io/images/hzvxs3nf/production/2e0efec87797028bcde6c8dbe6bc8d88408e9e9f-720x470.webp"
+  },
+  {
+    "_createdAt": "2026-04-03T07:46:21Z",
+    "_id": "image-4252104812445ab25f57e0670ed2c751bb89a004-600x600-webp",
+    "_rev": "5RHnDHga3j5d2aGwsEwif3",
+    "_type": "sanity.imageAsset",
+    "_updatedAt": "2026-04-03T07:46:21Z",
+    "assetId": "4252104812445ab25f57e0670ed2c751bb89a004",
+    "extension": "webp",
+    "metadata": {
+      "_type": "sanity.imageMetadata",
+      "blurHash": "e8ATZjRP00Io00-;M{IUxuxa00NG.8-p~qRO%2xuIoE1x]-qxZD%D*",
+      "dimensions": {
+        "_type": "sanity.imageDimensions",
+        "aspectRatio": 1,
+        "height": 600,
+        "width": 600
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAPoAAAD6AG1e1JrAAADYklEQVR4nO3UXUxTZxgH8Do33YWYrMTZlI9EQYcdfuF0CxoKlWmWedFoGsAMiSm2hdpOKIV+UE571sNHT093Dh8tp6fntLWc2p2CQskUQkQTEPy4MHrBhVIvjBea6I2GLNmEx/SaJux2yf6X78Uv//d53rwi0X82BoNhq9Vg2NHe2Jiv1WrzGhoaJEqlMvekUplbW1u7M3Om1+ul9fX1uRqN5ouNvE06ne5rRK8/03fZaOppNdscFntrl9OpRVC3xuVyXUFcLouts9NsNLaca25ulmzYUK1W7+zR6zWs1XqHdqEvHB3252aLbQnr7luiBgaf9Q8G0oSPWurt9QQwDCvdEFSp1OLudsvFGNn/OIATqzWqOqhUVIO6UQu9HgJohlujg+wKy7CjHMeVZb1mZhaZ2alUqs1Nrd4CDA91xvhkmiCotfITFbCraA8oz9aAuxsHho0CTYfecgwTFGIx2TpNLpd/bjabpQzD7ON5/iuzO1HmpVN/ROKp9w4Eg0NlR6FoTwnUnL8AHi8FXGTkrwDNLvSTpJqiqB3rQJlMtiUQCBy7OTHZdDOVkqO/88rB6K17wcjoqrbpVyjZVwqlBw7DJd1l8A+zwMeTL4MhrgdF0W+zbjkDJjju9OLMDP/g9u0hITFB8sKt54HgCJw9Vwe7i/bCsR+OQ4vJApGr8Y/C2PgThmVNPl/fdxRFbV8HFhcXb50R4j+n78/PLT9afHV3ajqdECY+4MQQVCpOQUHhLjhRUQWmdhuEo/zfV0fiy/5h/3iYZRyCEPsma8PZBH/62fzsveUH8x/npqdXE9fG1lC3B45+Xw7S/EKoqKyGtg47+OnQKtk/sEIQ+OsIx1wbTyYPZ9vy5huM/8jDyevM09mp9MLU1HshlvjH1NqxVrr/IEjzCkBeVQ1t7TbACRLcWA+gKLri8+Kj9MBA9mfDEIg4GRo6dfd6Aln4czIeHw7O1NedX9xdVPxUml+wJK86+eJKS9sbF+p+1+VE3zmdrleY2x3xeDwHsoEiBBF9hiDItlQ0Wjg3NnaQ83rLf1QofpJI8n6RSPK0cnmV1WA0Una7g+nqcjLYb9iQD8d1JEkWZgWztRaJRFvEYvH2nJycXIVCkfkQ9lqtVhmCIDIv5i2hKCo/HA5/+W/B/yPaMJ8ACpeP20SYD0oAAAAASUVORK5CYII=",
+      "palette": {
+        "_type": "sanity.imagePalette",
+        "darkMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#483830",
+          "foreground": "#fff",
+          "population": 0,
+          "title": "#fff"
+        },
+        "darkVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#2c5db6",
+          "foreground": "#fff",
+          "population": 0.09,
+          "title": "#fff"
+        },
+        "dominant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#2c5db6",
+          "foreground": "#fff",
+          "population": 0.09,
+          "title": "#fff"
+        },
+        "lightMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#c4dcd4",
+          "foreground": "#000",
+          "population": 0,
+          "title": "#000"
+        },
+        "lightVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#f49494",
+          "foreground": "#000",
+          "population": 0,
+          "title": "#fff"
+        },
+        "muted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#a05c5f",
+          "foreground": "#fff",
+          "population": 0.01,
+          "title": "#fff"
+        },
+        "vibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#4c84fc",
+          "foreground": "#fff",
+          "population": 0,
+          "title": "#fff"
+        }
+      },
+      "thumbHash": "4AeGBQAkuQR4h2d1iPxk/Hm3FXp5h4B7eA=="
+    },
+    "mimeType": "image/webp",
+    "originalFilename": "locking-number-plate-storage-1.webp",
+    "path": "images/hzvxs3nf/production/4252104812445ab25f57e0670ed2c751bb89a004-600x600.webp",
+    "sha1hash": "4252104812445ab25f57e0670ed2c751bb89a004",
+    "size": 23608,
+    "uploadId": "p4dBaUopSTwzAVvafdAm3lSG0V7YqlnT",
+    "url": "https://cdn.sanity.io/images/hzvxs3nf/production/4252104812445ab25f57e0670ed2c751bb89a004-600x600.webp"
+  },
+  {
+    "_createdAt": "2026-04-03T07:46:08Z",
+    "_id": "image-51917145b3e3d8090a802406017f8daf5c3f3871-600x600-webp",
+    "_rev": "5RHnDHga3j5d2aGwsEwhls",
+    "_type": "sanity.imageAsset",
+    "_updatedAt": "2026-04-03T07:46:08Z",
+    "assetId": "51917145b3e3d8090a802406017f8daf5c3f3871",
+    "extension": "webp",
+    "metadata": {
+      "_type": "sanity.imageMetadata",
+      "blurHash": "e44_%?WC00ob.8%Na#M_fOof00oe?wj[IUITocxva$agt7oef8RjWC",
+      "dimensions": {
+        "_type": "sanity.imageDimensions",
+        "aspectRatio": 1,
+        "height": 600,
+        "width": 600
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAPoAAAD6AG1e1JrAAACWElEQVR4nGNgGKqASV5enkNPT4/b2NiYlYGBgZEi04TVrXh1DD1NrGyD/X0DY1zj41OMY2NT1AIDAyXt7e15QkNDmUkyUFzeX0HTMLLaxjl+n7d/zOGwyMS1kQmpkyLj00rDY5PD/YLC7OxcXFSNjY25iDJQWjVRX8csbamda8onF8+wP94BYV8j4lJeJmcX3Y1Pzz/nFRC+w8zKpkpVV1eJGPOY1E1yrSycina6+WX+cvMJ++/pG/o/LDblf2ZBxf/k7OJ/Lp7+7zR1DOaLy8joEDRNRUWF3dYlydsrqOBkSHTuv9DolP8BobH/I+LT/ueU1PxPySn5b+fk+UxJRaNHVFZWmaCB+vr6Au5eoQlBESmXw2LT/kclZvwPj039H5+W9z+/ouF/YkbBf3Nrx9vyispF8vLyEgQNtLJykfIJCC/1D4296xsc9d8/LOZ/SFTi/5jkrP9ZRVX/oxIy/huaWl2WkpVPkJeXFyBooJN3qHRgaExJSFTiNd/g6D+u3kH/Pf3DwAYnZOT/D4yI/6Orb3ZMUlbBn6hYNjPz4PMNjHANi02eExged8/TL/S7X0j034i41P/JWUX//YJjPuoaWSyXUVQzZWBgICo9Mlu4uQl5+QU5evqGtvuGRB8Mi01+mZhR8Cstt/Sfl3/EYx0ji2Z5eXUFBhIAIyjbWVk5qju6+0b6BEbMTEjL35eYXnjN2TNwn6ahWayMlpYQAxmASVdXV9Da0V07LDLB3TcoJsfC1jVdQ89Eh0FLi42BEgBKn3p6lmI6OubiMjIWnBQXGKOAARcAAG7Yvx8UW198AAAAAElFTkSuQmCC",
+      "palette": {
+        "_type": "sanity.imagePalette",
+        "darkMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#242e54",
+          "foreground": "#fff",
+          "population": 0.04,
+          "title": "#fff"
+        },
+        "darkVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#0f1d86",
+          "foreground": "#fff",
+          "population": 0.09,
+          "title": "#fff"
+        },
+        "dominant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#0f1d86",
+          "foreground": "#fff",
+          "population": 0.09,
+          "title": "#fff"
+        },
+        "lightMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#8c9ca0",
+          "foreground": "#000",
+          "population": 0,
+          "title": "#fff"
+        },
+        "lightVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#8b96ed",
+          "foreground": "#000",
+          "population": 0,
+          "title": "#fff"
+        },
+        "muted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#727aa5",
+          "foreground": "#fff",
+          "population": 0.01,
+          "title": "#fff"
+        },
+        "vibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#162494",
+          "foreground": "#fff",
+          "population": 0.01,
+          "title": "#fff"
+        }
+      },
+      "thumbHash": "lfeBBQAjSfZ3h2eKl1AyAkmFB6iJdoFchw=="
+    },
+    "mimeType": "image/webp",
+    "originalFilename": "locking-number-plate-storage-3.webp",
+    "path": "images/hzvxs3nf/production/51917145b3e3d8090a802406017f8daf5c3f3871-600x600.webp",
+    "sha1hash": "51917145b3e3d8090a802406017f8daf5c3f3871",
+    "size": 17750,
+    "uploadId": "SlDPNqnGZyuIykVUa9VkcV4Ifi3CLgp0",
+    "url": "https://cdn.sanity.io/images/hzvxs3nf/production/51917145b3e3d8090a802406017f8daf5c3f3871-600x600.webp"
+  },
+  {
+    "_createdAt": "2026-04-03T08:45:03Z",
+    "_id": "image-620e5908c5c7967239a91544f0137bbd9a48448b-256x256-svg",
+    "_rev": "5RHnDHga3j5d2aGwsEzuYV",
+    "_type": "sanity.imageAsset",
+    "_updatedAt": "2026-04-03T08:45:03Z",
+    "assetId": "620e5908c5c7967239a91544f0137bbd9a48448b",
+    "extension": "svg",
+    "metadata": {
+      "_type": "sanity.imageMetadata",
+      "blurHash": "eEI#x__3D%M{0000-;xu%MRj00xu?bM{%M~qayt7D%ofM{D%D%%Mxu",
+      "dimensions": {
+        "_type": "sanity.imageDimensions",
+        "aspectRatio": 1,
+        "height": 256,
+        "width": 256
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuUlEQVR4nNXUTYiOURjG8TFm5NtI6CXEYqgZn+Ujg41822BFjVK+FlZIWCqyEAsLKTuFhZ3dNEnNTDJNKTMRFqJkZYFsqPunwz16V/I+ZeEsr/t5/uec+1zX3dT0LxbGYz6WYzGmobkqbGxCzuAurmIzplQFTsRuPMRnvMA5zKsKnIBteIAPGMJJzKkKbMYCHMKVvPrqslFV4BjMQBf2YSsWYnI5JTqwAu2YhUVlw4hYh6WYjdZ6YAtW4iLu4Tr2YAkO4Ebq5bGO41K2pzcibqfW/huKcdnDR/iCEZzGelzAq6JHxDs8wcv87hs+RcQATqBWD9wZEYMQEW9wHhtxOSLeFx1f0wG96Ev9e8LvY22x4F8D84TXsD17fSciPv4qxWBE7C0WbOSEQ9nb4tsaTuF11kbSJdMbAfZjU7qiLQHDWXuOo8UtjQD7sCH7XrJ+EM/qgMf+L+AOPE4blEafLT+nid+mXnzaVQfsjoinWRuOiCOjwFasyYT0pPv3Z6wO50jryaR0JnAStuBm1m5hV0RMHc1yebXOzGeJ4dwyD3Porkq9ZPrnjMwZOhPLslYGc8l0S6WB8qf1A1zL1gauy7s/AAAAAElFTkSuQmCC",
+      "palette": {
+        "_type": "sanity.imagePalette",
+        "darkMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#3c3c3c",
+          "foreground": "#fff",
+          "population": 0.03,
+          "title": "#fff"
+        },
+        "darkVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#424242",
+          "foreground": "#fff",
+          "population": 0,
+          "title": "#fff"
+        },
+        "dominant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#bcbcbc",
+          "foreground": "#000",
+          "population": 0.03,
+          "title": "#fff"
+        },
+        "lightMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#bcbcbc",
+          "foreground": "#000",
+          "population": 0.03,
+          "title": "#fff"
+        },
+        "lightVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#bcbcbc",
+          "foreground": "#000",
+          "population": 0,
+          "title": "#fff"
+        },
+        "muted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#7c7c7c",
+          "foreground": "#fff",
+          "population": 0.02,
+          "title": "#fff"
+        },
+        "vibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#7f7f7f",
+          "foreground": "#fff",
+          "population": 0,
+          "title": "#fff"
+        }
+      },
+      "thumbHash": "PwiCBQAlhZd4eIh4+AAAAAAAaUaDiICpdw=="
+    },
+    "mimeType": "image/svg+xml",
+    "originalFilename": "linkedin.svg",
+    "path": "images/hzvxs3nf/production/620e5908c5c7967239a91544f0137bbd9a48448b-256x256.svg",
+    "sha1hash": "620e5908c5c7967239a91544f0137bbd9a48448b",
+    "size": 1312,
+    "uploadId": "dMQC1NCozBL7OjNmB7Q8Gs6aycZ9IL0d",
+    "url": "https://cdn.sanity.io/images/hzvxs3nf/production/620e5908c5c7967239a91544f0137bbd9a48448b-256x256.svg"
+  },
+  {
+    "_createdAt": "2026-04-03T05:52:27Z",
+    "_id": "image-ed26a191caf2aa261999b012a5a3366eb409a823-720x853-webp",
+    "_rev": "5RHnDHga3j5d2aGwsEmll4",
+    "_type": "sanity.imageAsset",
+    "_updatedAt": "2026-04-03T05:52:27Z",
+    "assetId": "ed26a191caf2aa261999b012a5a3366eb409a823",
+    "extension": "webp",
+    "metadata": {
+      "_type": "sanity.imageMetadata",
+      "blurHash": "eRFrkgkDRPRj-;wHIo%LxtRk~VNGM{Rjfk%KRkahs.WVW=R*kCj?j]",
+      "dimensions": {
+        "_type": "sanity.imageDimensions",
+        "aspectRatio": 0.8440797186400938,
+        "height": 853,
+        "width": 720
+      },
+      "hasAlpha": false,
+      "isOpaque": true,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAYABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAUGBwME/8QAJRAAAQQCAgAGAwAAAAAAAAAAAQACAwQFEQYhBxIVMWFxE5HB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwIE/8QAHREAAgIBBQAAAAAAAAAAAAAAAAECERMUMUJSYf/aAAwDAQACEQMRAD8AjMjewmJkbPBkrks7TtrGneypKvz9kTK4ldarRvHRB1+1SeY42T1VjKEBfF5fM129b+lD5U5MhsVyBzBEOu+vtDgjKNSYuV3aN8x3KTPUa8ZJ4B9gZEWQUId1IyXEbCItKuzLz+IvPEsbWmyYhuzEyw7jjY72cB/V08X2YfH4EMkaXZCTqEM9x8n4RFo5ArY8XD8fX9ArG5D+SVw2TrfSIiok/9k=",
+      "palette": {
+        "_type": "sanity.imagePalette",
+        "darkMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#45413f",
+          "foreground": "#fff",
+          "population": 4.47,
+          "title": "#fff"
+        },
+        "darkVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#921c1e",
+          "foreground": "#fff",
+          "population": 0.09,
+          "title": "#fff"
+        },
+        "dominant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#c0bab0",
+          "foreground": "#000",
+          "population": 9.03,
+          "title": "#fff"
+        },
+        "lightMuted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#c0bab0",
+          "foreground": "#000",
+          "population": 9.03,
+          "title": "#fff"
+        },
+        "lightVibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#f4eec4",
+          "foreground": "#000",
+          "population": 0.86,
+          "title": "#000"
+        },
+        "muted": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#a68556",
+          "foreground": "#fff",
+          "population": 2.56,
+          "title": "#fff"
+        },
+        "vibrant": {
+          "_type": "sanity.imagePaletteSwatch",
+          "background": "#c6404a",
+          "foreground": "#fff",
+          "population": 0.04,
+          "title": "#fff"
+        }
+      },
+      "thumbHash": "WwgKFgJ4xnelafhWhnqHd4hnlm9v+dY="
+    },
+    "mimeType": "image/webp",
+    "originalFilename": "hanger-black-n-blue-4.webp",
+    "path": "images/hzvxs3nf/production/ed26a191caf2aa261999b012a5a3366eb409a823-720x853.webp",
+    "sha1hash": "ed26a191caf2aa261999b012a5a3366eb409a823",
+    "size": 97602,
+    "uploadId": "QjtNy7a89jUSfSBAdkMKCCPXgKjQCKFa",
+    "url": "https://cdn.sanity.io/images/hzvxs3nf/production/ed26a191caf2aa261999b012a5a3366eb409a823-720x853.webp"
   }
 ]
